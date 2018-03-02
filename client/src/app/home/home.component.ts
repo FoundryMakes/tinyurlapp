@@ -42,6 +42,7 @@ export class HomeComponent implements OnInit {
     this.dataService.shortenUrl(url).subscribe(
       result => {
         console.log('result: ', result);
+        this.urls$ = this.dataService.getTinyUrls();
       },
       err => {
         console.log(err);
